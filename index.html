@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZOMI</title>
+  <title>ZOMI â€” Survive the Outbreak</title>
+  <meta name="description" content="ZOMI: a 2D side-scrolling action-survival game built in C with SDL2. Four acts, two players, keyboard / ESP32 / PS4 input. Free download." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logominiature.png" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════  NAV  ═══════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  NAV  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <nav id="navbar">
     <div class="nav-logo">
       <img src="logominiature.png" alt="ZOMI" />
@@ -22,11 +23,12 @@
       <li><a href="#gameplay">Gameplay</a></li>
       <li><a href="#characters">Characters</a></li>
       <li><a href="#team">Team</a></li>
+      <li><a href="download.html" class="nav-download">Download</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle">&#9776;</div>
   </nav>
 
-  <!-- ═══════════════════════════  HERO  ══════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  HERO  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
@@ -34,21 +36,27 @@
       <img src="assets/ui/logo.png" alt="ZOMI Logo" class="hero-logo" />
       <h1 class="hero-title">ZOMI</h1>
       <p class="hero-tagline">
-        Inspired by <em>World War Z</em> — Survive the collapse. Fight the horde.
+        Inspired by <em>World War Z</em> â€” Survive the collapse. Fight the horde.
         Find the cure.
       </p>
       <div class="hero-badges">
-        <span class="badge">C / SDL2</span>
+        <span class="badge">C99 &middot; SDL2</span>
         <span class="badge">Solo &amp; Co-op</span>
         <span class="badge">4 Acts</span>
-        <span class="badge">ESP32 Controller</span>
+        <span class="badge">ESP32 / PS4 / Keyboard</span>
+        <span class="badge badge-new">PS4 Support &mdash; New!</span>
       </div>
-      <a href="#about" class="btn-primary">Discover the Game</a>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">Discover the Game</a>
+        <a href="download.html" class="btn-primary btn-download">
+          <span class="dl-icon">&#8595;</span> Download
+        </a>
+      </div>
     </div>
     <div class="hero-scroll-hint">&#8595; Scroll</div>
   </section>
 
-  <!-- ═══════════════════════════  ABOUT  ═════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  ABOUT  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="about">
     <div class="container">
       <div class="section-header">
@@ -62,22 +70,27 @@
             entirely in <strong>C with SDL2</strong>, inspired by the novel and film
             <em>World War Z</em>. A zombie pandemic has shattered civilization.
             Streets are overrun, walls have fallen, and the last survivors must
-            fight, puzzle, and escape across four desperate acts.
+            fight, puzzle, and escape across <strong>four desperate acts</strong>.
           </p>
           <p>
             Play <strong>solo</strong> or team up in <strong>local co-op</strong>
-            with a friend. Use your fists, your feet, or your gun. Solve puzzles,
-            hack terminals, escape on a crane, survive at 30,000 feet — and finally
-            reach the laboratory where it all began.
+            with a friend. Crack skulls with your fists, your feet, or your gun.
+            Hack terminals, swing from cranes, fall out of airplanes, infiltrate
+            the laboratory where the outbreak began &mdash; and reach the only
+            antidote left on Earth.
           </p>
           <p>
-            The game supports a custom <strong>ESP32 wireless controller</strong>
-            alongside keyboard &amp; mouse, delivering a unique physical gameplay
-            experience built from scratch.
+            ZOMI ships with <strong>three input methods</strong>: keyboard &amp; mouse,
+            a <strong>PS4 / Xbox controller</strong> (via SDL_GameController),
+            and a fully custom <strong>ESP32 wireless gamepad</strong> built from
+            scratch &mdash; communicating over UDP/WiFi with no third-party library.
+            All three are first-class, with on-screen tutorials adapting to whichever
+            you plug in.
           </p>
           <div class="about-stats">
             <div class="stat"><span>4</span><label>Acts</label></div>
             <div class="stat"><span>2</span><label>Players</label></div>
+            <div class="stat"><span>3</span><label>Input methods</label></div>
             <div class="stat"><span>6</span><label>Developers</label></div>
           </div>
         </div>
@@ -91,7 +104,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════  ACTS  ══════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  ACTS  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="acts">
     <div class="container">
       <div class="section-header">
@@ -109,9 +122,10 @@
             reach the evacuation zone before the horde seals the last exit.</p>
             <ul class="act-features">
               <li>&#9658; Open city environment</li>
-              <li>&#9658; Crane escape mechanic</li>
-              <li>&#9658; Zombie wave system</li>
-              <li>&#9658; Second Chance quiz</li>
+              <li>&#9658; Hackable control station</li>
+              <li>&#9658; Crane escape &amp; helicopter wave</li>
+              <li>&#9658; Second Chance quiz on death</li>
+              <li>&#9658; Animated input tutorials</li>
             </ul>
             <span class="act-badge available">Available</span>
           </div>
@@ -121,14 +135,15 @@
           <div class="act-overlay"></div>
           <div class="act-content">
             <span class="act-number">ACT II</span>
-            <h3>Jerusalem</h3>
+            <h3>Broken Medina</h3>
             <p>The walls held for millennia. The infected climbed them like a rising
             tide. A signal from the Old City claims someone is still alive.</p>
             <ul class="act-features">
               <li>&#9658; Ancient city parkour</li>
               <li>&#9658; Underground passages</li>
-              <li>&#9658; Chain mechanic</li>
+              <li>&#9658; Chain &amp; pulley mechanic</li>
               <li>&#9658; Boss encounter</li>
+              <li>&#9658; Seamless transition to Act III</li>
             </ul>
             <span class="act-badge available">Available</span>
           </div>
@@ -142,10 +157,11 @@
             <p>At 30,000 feet. The cargo hold was not empty. One infected was enough.
             Autopilot lands in 4 hours in a city that no longer exists.</p>
             <ul class="act-features">
-              <li>&#9658; Mid-air survival</li>
-              <li>&#9658; Puzzle locks</li>
-              <li>&#9658; Inventory system</li>
-              <li>&#9658; Crash ending</li>
+              <li>&#9658; Mid-air zombie combat</li>
+              <li>&#9658; Drag-and-drop puzzle on death</li>
+              <li>&#9658; <strong>"WASTED"</strong> cinematic death</li>
+              <li>&#9658; Three-slot inventory system</li>
+              <li>&#9658; Boss zombie wave</li>
             </ul>
             <span class="act-badge available">Available</span>
           </div>
@@ -159,12 +175,13 @@
             <p>This is where it all began. Patient Zero is still here. The antidote
             is one floor up. The elevator needs a keycard.</p>
             <ul class="act-features">
-              <li>&#9658; Hacking mini-game</li>
-              <li>&#9658; Lab puzzles</li>
-              <li>&#9658; Final boss</li>
-              <li>&#9658; True ending</li>
+              <li>&#9658; Multi-stage hacking mini-game</li>
+              <li>&#9658; Lab logic puzzles</li>
+              <li>&#9658; Final boss &mdash; Patient Zero</li>
+              <li>&#9658; <strong>"WASTED"</strong> death sequence</li>
+              <li>&#9658; True ending cinematic</li>
             </ul>
-            <span class="act-badge coming">Coming Soon</span>
+            <span class="act-badge available">Available</span>
           </div>
         </div>
 
@@ -172,7 +189,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════  GAMEPLAY  ══════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  GAMEPLAY  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="gameplay">
     <div class="container">
       <div class="section-header">
@@ -186,16 +203,17 @@
           <div class="feature-icon">&#9994;</div>
           <h3>Combat System</h3>
           <p>Three-slot inventory: punch, kick, and firearm. Cycle weapons with
-          <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> or the controller's L/R buttons.
-          Execute with <kbd>F</kbd> or the red button.</p>
+          <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>, the ESP32 trigger, or the
+          PS4 <strong>L1 / R1</strong> shoulders. Execute with <kbd>F</kbd>,
+          the red button, or PS4 <strong>Square</strong>.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">&#10084;</div>
           <h3>Health &amp; Healing</h3>
-          <p>Each player has 3 lives. Pick up bandages to heal. The HUD shows
-          hearts and ammo at all times. Lose all lives — face the Second Chance
-          quiz to come back.</p>
+          <p>Each player has 5 lives. Pick up bandages to heal. When your health
+          drops to 3, an in-world tutorial reminds you which button heals on your
+          current input. Lose all lives â€” face the Second Chance quiz to come back.</p>
           <div class="hud-preview">
             <img src="assets/hud/hearts.png" alt="Hearts" title="Health" />
             <img src="assets/ui/bandage.png" alt="Bandage" title="Bandage" />
@@ -206,33 +224,64 @@
 
         <div class="feature-card">
           <div class="feature-icon">&#128101;</div>
-          <h3>Solo &amp; Co-op</h3>
+          <h3>Solo &amp; Split-Screen Co-op</h3>
           <p>Play alone or with a friend on the same machine. In co-op, each player
-          gets their own viewport, health bar, and input method.</p>
+          gets their own viewport, health bar, and input method. A small badge in
+          each half-screen shows at a glance which controller you're holding.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#129504;</div>
+          <h3>Adaptive Tutorials</h3>
+          <p>On-screen prompts auto-detect your input. Press the right shape
+          for your controller &mdash; <strong>PS4 button icons</strong> on a
+          PS4 pad, custom colored circles on the ESP32 pad, or keyboard hints
+          on a keyboard. Sprint hint appears after your first jump and fades
+          when you sprint.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">&#128187;</div>
           <h3>Puzzles &amp; Mini-games</h3>
-          <p>Hack terminals with a timing mini-game. Solve logic enigmas and quizzes.
-          Answer correctly to earn a Second Chance after death. Every level hides
-          a unique puzzle mechanic.</p>
+          <p>Hack city terminals with a flux-routing mini-game. Solve a
+          drag-and-drop image puzzle to earn a Second Chance after dying in
+          the airplane. Answer Second Chance quizzes after death in the city.
+          Every level hides a unique mechanic.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#127916;</div>
+          <h3>Cinematics &amp; Death FX</h3>
+          <p>MP4 cinematics between acts via libavcodec, with PTS-synced audio
+          and a 1.8&times; soft-knee audio boost so dialogue cuts through. On
+          death, the camera zooms in on your character, the screen tints red,
+          and <strong>"WASTED"</strong> punches through &mdash; before you face
+          your second-chance challenge.</p>
         </div>
 
         <div class="feature-card feature-card-controller">
           <h3>ESP32 Controller</h3>
-          <img src="assets/buttons/manette.png" alt="Controller" class="controller-img" />
+          <img src="assets/buttons/manette.png" alt="ESP32 Controller" class="controller-img" />
           <p>A custom wireless gamepad built on ESP32 communicates via UDP over
-          WiFi. Joystick, D-pad, four action buttons, L/R triggers — fully mapped
-          for every level. No external library required.</p>
+          WiFi. Joystick, four action buttons, L1/R1 shoulders, click-to-sprint &mdash;
+          fully mapped for every level.</p>
+        </div>
+
+        <div class="feature-card feature-card-controller">
+          <h3>PS4 / Xbox Controller</h3>
+          <img src="assets/buttons/manetteps4.png" alt="PS4 Controller" class="controller-img" />
+          <p>Plug any PS4 or Xbox-compatible pad. SDL_GameController handles
+          the mapping. Tutorials show the exact <strong>&#9633;</strong>
+          <strong>&#9651;</strong> <strong>&#10005;</strong>
+          <strong>&#9711;</strong> buttons of your pad.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">&#127919;</div>
-          <h3>Scoring</h3>
-          <p>A score system tracks kills, time, and puzzles solved.
-          Top 3 scores are saved locally and displayed on the leaderboard
-          at the end of each run.</p>
+          <h3>Scoring &amp; Save</h3>
+          <p>A score system tracks kills, time, and puzzles solved. Top-3 scores
+          are saved locally and displayed on the leaderboard at the end of each
+          run. Auto-save after each completed act so you don't lose progress.</p>
         </div>
 
       </div>
@@ -240,16 +289,18 @@
       <!-- Controls reference -->
       <div class="controls-section">
         <h3>Controls</h3>
-        <div class="controls-grid">
+        <div class="controls-grid controls-grid-3">
           <div class="controls-col">
             <h4>&#9000; Keyboard &amp; Mouse</h4>
             <table class="controls-table">
-              <tr><td><kbd>Z / S</kbd></td><td>Move up / down</td></tr>
               <tr><td><kbd>Q / D</kbd></td><td>Move left / right</td></tr>
-              <tr><td><kbd>SPACE</kbd></td><td>Jump</td></tr>
+              <tr><td><kbd>Z</kbd></td><td>Jump (solo)</td></tr>
+              <tr><td><kbd>SPACE</kbd></td><td>Confirm / Hack flux</td></tr>
+              <tr><td><kbd>SHIFT</kbd></td><td>Sprint</td></tr>
               <tr><td><kbd>F</kbd></td><td>Attack (selected slot)</td></tr>
               <tr><td><kbd>G</kbd></td><td>Kick</td></tr>
               <tr><td><kbd>H</kbd></td><td>Heal (bandage)</td></tr>
+              <tr><td><kbd>E</kbd></td><td>Interact</td></tr>
               <tr><td><kbd>1 / 2 / 3</kbd></td><td>Select weapon slot</td></tr>
               <tr><td><kbd>ESC</kbd></td><td>Pause / Back</td></tr>
             </table>
@@ -258,12 +309,26 @@
             <h4>&#127918; ESP32 Controller</h4>
             <table class="controls-table">
               <tr><td>Joystick</td><td>Move</td></tr>
-              <tr><td>&#9650; D-pad</td><td>Jump</td></tr>
+              <tr><td>Joystick click</td><td>Sprint</td></tr>
+              <tr><td>Blue button</td><td>Jump</td></tr>
               <tr><td>Red button</td><td>Attack (selected slot)</td></tr>
-              <tr><td>Blue button</td><td>Heal</td></tr>
-              <tr><td>R1 / L1</td><td>Cycle weapon slots</td></tr>
-              <tr><td>Green button</td><td>Back / Pause</td></tr>
-              <tr><td>Yellow button</td><td>Confirm</td></tr>
+              <tr><td>Green button</td><td>Heal</td></tr>
+              <tr><td>Black button</td><td>Interact</td></tr>
+              <tr><td>L1 / R1</td><td>Cycle weapon slots</td></tr>
+              <tr><td>Yellow button</td><td>Confirm / Pause</td></tr>
+            </table>
+          </div>
+          <div class="controls-col controls-col-ps4">
+            <h4>&#127918; PS4 / Xbox <span class="new-tag">NEW</span></h4>
+            <table class="controls-table">
+              <tr><td>Left stick</td><td>Move</td></tr>
+              <tr><td>L3 (stick click)</td><td>Sprint</td></tr>
+              <tr><td>&#10005; Cross</td><td>Jump</td></tr>
+              <tr><td>&#9633; Square</td><td>Attack (selected slot)</td></tr>
+              <tr><td>&#9711; Circle</td><td>Heal</td></tr>
+              <tr><td>&#9651; Triangle</td><td>Interact</td></tr>
+              <tr><td>L1 / R1</td><td>Cycle weapon slots</td></tr>
+              <tr><td>Options / Start</td><td>Pause</td></tr>
             </table>
           </div>
         </div>
@@ -271,7 +336,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════  CHARACTERS  ════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  CHARACTERS  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="characters">
     <div class="container">
       <div class="section-header">
@@ -283,7 +348,6 @@
 
         <div class="char-card player-card">
           <div class="char-img-wrap">
-            <!-- p1.png: 13824×6144, frame 384×384, 36 cols × 16 rows — idle row 0 col 0 -->
             <div class="sprite-idle char-float" style="
               background-image: url('assets/players/p1.png');
               background-size: calc(36 * 100%) calc(16 * 100%);
@@ -305,7 +369,6 @@
 
         <div class="char-card player-card">
           <div class="char-img-wrap">
-            <!-- p2.png: 13824×6144, frame 384×384, 36 cols × 16 rows — idle row 0 col 0 -->
             <div class="sprite-idle char-float" style="
               background-image: url('assets/players/p2.png');
               background-size: calc(36 * 100%) calc(16 * 100%);
@@ -317,7 +380,7 @@
             <span class="char-role">Player 2</span>
             <h3>Karin</h3>
             <p>Combat medic. Carries extra bandages and knows how to use them.
-            Slower but tougher — the backbone of any duo run.</p>
+            Slower but tougher &mdash; the backbone of any duo run.</p>
             <div class="char-stats">
               <div class="stat-bar"><label>Speed</label><div class="bar"><div style="width:65%"></div></div></div>
               <div class="stat-bar"><label>Strength</label><div class="bar"><div style="width:80%"></div></div></div>
@@ -328,7 +391,6 @@
 
         <div class="char-card enemy-card">
           <div class="char-img-wrap enemy-bg">
-            <!-- zombies.png: 7520×1856, frame 208×206, 36 cols × 9 rows — idle row 0 col 0 -->
             <div class="sprite-idle" style="
               background-image: url('assets/enemies/zombies.png');
               background-size: calc(36 * 100%) calc(9 * 100%);
@@ -340,7 +402,8 @@
             <span class="char-role enemy-label">Enemy</span>
             <h3>The Infected</h3>
             <p>Once human. Now relentless. They sprint, they swarm, and they
-            don't stop. Take them down before they take you down.</p>
+            don't stop. Two variants &mdash; male sprinter and female brawler.
+            Take them down before they take you down.</p>
             <div class="char-stats">
               <div class="stat-bar"><label>Speed</label><div class="bar enemy-bar"><div style="width:80%"></div></div></div>
               <div class="stat-bar"><label>Aggression</label><div class="bar enemy-bar"><div style="width:95%"></div></div></div>
@@ -351,7 +414,6 @@
 
         <div class="char-card enemy-card boss-card">
           <div class="char-img-wrap enemy-bg">
-            <!-- boss.png: 13824×4608, frame 384×384, 36 cols × 12 rows — idle row 0 col 0 -->
             <div class="sprite-idle" style="
               background-image: url('assets/enemies/boss.png');
               background-size: calc(36 * 100%) calc(12 * 100%);
@@ -376,7 +438,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════  TECH  ══════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  TECH  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="tech">
     <div class="container">
       <div class="section-header">
@@ -384,26 +446,28 @@
         <h2>Built From Scratch</h2>
       </div>
       <div class="tech-grid">
-        <div class="tech-item"><span>C99</span><p>Core language — no engine, no shortcuts</p></div>
+        <div class="tech-item"><span>C99</span><p>Core language &mdash; no engine, no shortcuts</p></div>
         <div class="tech-item"><span>SDL2</span><p>Rendering, audio, input, window management</p></div>
         <div class="tech-item"><span>SDL2_image</span><p>PNG / JPEG texture loading</p></div>
         <div class="tech-item"><span>SDL2_mixer</span><p>Positional audio &amp; music playback</p></div>
-        <div class="tech-item"><span>SDL2_ttf</span><p>Font rendering (Cinzel, custom fonts)</p></div>
-        <div class="tech-item"><span>libavcodec</span><p>MP4 cinematics via FFmpeg</p></div>
+        <div class="tech-item"><span>SDL2_ttf</span><p>Font rendering (Cinzel, Bebas Neue, custom)</p></div>
+        <div class="tech-item"><span>libavcodec</span><p>MP4 cinematics via FFmpeg, PTS-synced</p></div>
+        <div class="tech-item"><span>SDL_GameController</span><p>PS4 / Xbox controller mapping</p></div>
         <div class="tech-item"><span>ESP32</span><p>Custom wireless controller over UDP/WiFi</p></div>
-        <div class="tech-item"><span>Linux</span><p>Developed &amp; tested on Ubuntu (Wayland)</p></div>
+        <div class="tech-item"><span>MSYS2 UCRT64</span><p>Windows toolchain &mdash; portable build</p></div>
+        <div class="tech-item"><span>Linux</span><p>Also developed &amp; tested on Ubuntu (Wayland)</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════  TEAM  ══════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  TEAM  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="team">
     <div class="container">
       <div class="section-header">
         <span class="section-label">The Developers</span>
         <h2>Credits</h2>
       </div>
-      <p class="team-subtitle">ESPRIT — University of Tunis &nbsp;·&nbsp; Final Year Project &nbsp;·&nbsp; 2026</p>
+      <p class="team-subtitle">ESPRIT &mdash; University of Tunis &nbsp;&middot;&nbsp; Final Year Project &nbsp;&middot;&nbsp; 2026</p>
       <div class="team-grid">
         <div class="team-card"><div class="team-avatar">YS</div><h3>Yousri Shabou</h3><span>Lead Developer</span></div>
         <div class="team-card"><div class="team-avatar">HB</div><h3>Hedi Boukhris</h3><span>Game Developer</span></div>
@@ -415,11 +479,12 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════  FOOTER  ════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  FOOTER  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <footer>
     <img src="assets/ui/logo.png" alt="ZOMI" class="footer-logo" />
-    <p>ZOMI &nbsp;·&nbsp; 2026</p>
-    <p class="footer-sub">Inspired by World War Z &nbsp;·&nbsp; Built with C &amp; SDL2</p>
+    <p>ZOMI &nbsp;&middot;&nbsp; 2026</p>
+    <p class="footer-sub">Inspired by World War Z &nbsp;&middot;&nbsp; Built with C &amp; SDL2</p>
+    <p class="footer-sub"><a href="download.html">Download ZOMI</a> &nbsp;&middot;&nbsp; <a href="https://github.com/yosritto/site-Zomi" target="_blank" rel="noopener">View on GitHub</a></p>
   </footer>
 
   <script src="script.js"></script>
