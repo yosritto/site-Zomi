@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download ZOMI</title>
-  <meta name="description" content="Download ZOMI â€” single-click installer for Windows. Free, no dependencies required, ~50 MB." />
+  <meta name="description" content="Download ZOMI â€” portable Windows build. Free, no installer, no dependencies, ~80 MB." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logominiature.png" />
 </head>
@@ -37,17 +37,17 @@
       <h1 class="dl-title">Download ZOMI</h1>
       <p class="dl-subtitle">
         One file. One click. No setup. No libraries to install.
-        Just unzip &mdash; or run the installer &mdash; and play.
+        Just unzip and play &mdash; no installer, no admin rights, no DLLs to fetch.
       </p>
 
       <!-- BIG download button -->
       <a id="dlMainBtn"
-         href="https://github.com/yosritto/site-Zomi/releases/latest/download/ZOMI-Setup.exe"
+         href="https://github.com/yosritto/site-Zomi/releases/latest/download/ZOMI-Portable.zip"
          class="btn-download-big">
         <span class="dl-icon-big">&#8595;</span>
         <span class="dl-label">
           <strong>Download for Windows</strong>
-          <small>Latest stable &nbsp;&middot;&nbsp; ~50 MB &nbsp;&middot;&nbsp; .exe installer</small>
+          <small>Latest stable &nbsp;&middot;&nbsp; ~80 MB &nbsp;&middot;&nbsp; Portable .zip (no install)</small>
         </span>
       </a>
 
@@ -91,10 +91,10 @@
   <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  WHAT'S INSIDE  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section class="dl-section dl-section-alt">
     <div class="container">
-      <h2>What's Inside the Installer</h2>
+      <h2>What's Inside the Zip</h2>
       <p class="dl-section-intro">
-        The Windows installer is self-contained &mdash; all SDL2 / FFmpeg DLLs
-        are bundled. No MSYS2, no library install. Once installed you'll find:
+        The portable build is self-contained &mdash; all SDL2 / FFmpeg DLLs
+        are bundled next to the executable. No MSYS2, no library install. Inside the folder:
       </p>
       <div class="dl-tree">
         <div class="tree-line tree-folder">ZOMI/</div>
@@ -127,26 +127,27 @@
         <div class="dl-step">
           <span class="step-num">1</span>
           <h3>Download</h3>
-          <p>Click the big button above. The browser saves <code>ZOMI-Setup.exe</code>
-          (around 50&nbsp;MB).</p>
+          <p>Click the big button above. The browser saves <code>ZOMI-Portable.zip</code>
+          (around 80&nbsp;MB).</p>
         </div>
         <div class="dl-step">
           <span class="step-num">2</span>
-          <h3>Run</h3>
-          <p>Double-click the file. Windows SmartScreen may warn you (the binary
-          isn't code-signed yet) &mdash; click <em>More info</em> &rarr; <em>Run anyway</em>.</p>
+          <h3>Extract</h3>
+          <p>Right-click the zip &rarr; <em>Extract All&hellip;</em> &mdash; pick any folder
+          (Desktop, Documents, USB stick, anywhere). No admin rights required.</p>
         </div>
         <div class="dl-step">
           <span class="step-num">3</span>
-          <h3>Pick a folder</h3>
-          <p>The installer asks where to extract. Default is
-          <code>C:\Program Files\ZOMI\</code>. Anywhere else is fine.</p>
+          <h3>Run</h3>
+          <p>Open the extracted folder and double-click <code>PLAY-ZOMI.bat</code>
+          (or <code>ZOMI.exe</code> directly). Windows SmartScreen may warn you on
+          first launch &mdash; click <em>More info</em> &rarr; <em>Run anyway</em>.</p>
         </div>
         <div class="dl-step">
           <span class="step-num">4</span>
           <h3>Play</h3>
-          <p>A desktop shortcut appears. Double-click and you're in. First launch
-          may take a few seconds to load the splash cinematic.</p>
+          <p>That's it. No install, no DLL setup, no MSYS2. To uninstall: delete
+          the folder. To update: download the new zip and replace the folder.</p>
         </div>
       </div>
     </div>
